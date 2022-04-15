@@ -74,3 +74,16 @@ button {
   border-radius: 10px;
   background-color: beige;
 }
+
+.todos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.todo {
+  background-color: burlywood;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 5px 10px 5px #ab7f7f;
+}
