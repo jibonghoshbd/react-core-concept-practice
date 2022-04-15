@@ -63,4 +63,14 @@
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 10px 5px gray;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: beige;
 }

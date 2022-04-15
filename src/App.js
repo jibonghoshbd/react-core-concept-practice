@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { buildQueries } from '@testing-library/react';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
   );
 }
 
+// blog component 
 function Blog(props) {
   return (
     <article className='blogs'>
@@ -26,14 +28,23 @@ function Blog(props) {
   )
 }
 
+// Mobile component 
 function Mobile(props) {
+  const [bettery, setBettery] = useState(100)
+  const batteryDown = () => {
+    const betteryPower = bettery - 1;
+    if (betteryPower >= 0) {
+      setBettery(betteryPower)
+    } else if (betteryPower < 0) {
+      alert('Switch Off')
+    }
 
+  }
   return (
-    <div className='mobiles'>
-      <div className='mobile'>
-        <h2>Name:{props.name} </h2>
-        <p>Battery Down</p>
-      </div>
+    <div className='mobile'>
+      <h2>Name:{props.name} </h2>
+      <p>Battery: {bettery}%</p>
+      <button onClick={batteryDown}>Battery Down</button>
     </div>
   )
 }
