@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import { buildQueries } from '@testing-library/react';
 
 function App() {
   return (
     <div className="App">
+      <Mobile name='Samsung a52 pro'></Mobile>
+      <Mobile name='Vivo Y53'></Mobile>
       <Blog name='Solim Uddim'></Blog>
       <Blog name='Kolim Uddin'></Blog>
       <Blog name="Abdur Alim Khan"></Blog>
@@ -20,6 +23,18 @@ function Blog(props) {
         <p style={{ color: 'blue', fontSize: '20px' }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat consequuntur beatae distinctio sunt cumque quis dolor placeat esse doloremque laborum similique molestiae necessitatibus itaque animi ipsa eveniet dolore in exercitationem magni, nemo provident praesentium eos saepe? Numquam, cum quam quis consequuntur ad deleniti impedit delectus quos ducimus magni maiores et?</p>
       </div>
     </article>
+  )
+}
+
+function Mobile(props) {
+
+  return (
+    <div className='mobiles'>
+      <div className='mobile'>
+        <h2>Name:{props.name} </h2>
+        <p>Battery Down</p>
+      </div>
+    </div>
   )
 }
 

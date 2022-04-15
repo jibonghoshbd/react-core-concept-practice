@@ -54,3 +54,13 @@
   padding: 10px;
   box-shadow: 5px 10px 5px gray;
 }
+
+.mobile {
+  background-color: rgb(118, 172, 219);
+  width: 47%;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 5px gray;
+}
